@@ -1,13 +1,13 @@
 ﻿using Microsoft.IdentityModel.JsonWebTokens;
-using RestWithASPNETUdemy.Configurations;
-using RestWithASPNETUdemy.Data.VO;
-using RestWithASPNETUdemy.Repository;
-using RestWithASPNETUdemy.Services;
 using System;
 using System.Collections.Generic;
 using System.Security.Claims;
+using RestWithASPNET5.Configurations;
+using RestWithASPNET5.Data.VO;
+using RestWithASPNET5.Repository;
+using RestWithASPNET5.Services;
 
-namespace RestWithASPNETUdemy.Business.Implementations
+namespace RestWithASPNET5.Business.Implementations
 {
     public class LoginBusinessImplementation : ILoginBusiness
     {

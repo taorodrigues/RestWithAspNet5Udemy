@@ -1,6 +1,6 @@
-﻿using RestWithASPNETUdemy.Data.VO;
+﻿using RestWithASPNET5.Data.VO;
 
-namespace RestWithASPNETUdemy.Business
+namespace RestWithASPNET5.Business
 {
     public interface ILoginBusiness
     {

@@ -1,10 +1,10 @@
-﻿using RestWithASPNETUdemy.Data.Converter.Contract;
-using RestWithASPNETUdemy.Data.VO;
-using RestWithASPNETUdemy.Model;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using RestWithASPNET5.Data.Converter.Contract;
+using RestWithASPNET5.Data.VO;
+using RestWithASPNET5.Model;
 
-namespace RestWithASPNETUdemy.Data.Converter.Implementations
+namespace RestWithASPNET5.Data.Converter.Implementations
 {
     public class BookConverter : IParser<BookVO, Book>, IParser<Book, BookVO>
     {

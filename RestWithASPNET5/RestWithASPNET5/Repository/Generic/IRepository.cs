@@ -1,8 +1,8 @@
-﻿using RestWithASPNETUdemy.Model;
-using RestWithASPNETUdemy.Model.Base;
+﻿using RestWithASPNET5.Model;
 using System.Collections.Generic;
+using RestWithASPNET5.Model.Base;
 
-namespace RestWithASPNETUdemy.Repository
+namespace RestWithASPNET5.Repository
 {
     public interface IRepository<T> where T : BaseEntity
     {

@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using RestWithASPNETUdemy.Business;
-using RestWithASPNETUdemy.Data.VO;
-using RestWithASPNETUdemy.Hypermedia.Filters;
 using System.Collections.Generic;
+using RestWithASPNET5.Business;
+using RestWithASPNET5.Data.VO;
+using RestWithASPNET5.Hypermedia.Filters;
 
-namespace RestWithASPNETUdemy.Controllers
+namespace RestWithASPNET5.Controllers
 {
 
     [ApiVersion("1")]

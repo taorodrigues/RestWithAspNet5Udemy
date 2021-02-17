@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace RestWithASPNETUdemy.Data.Converter.Contract
+namespace RestWithASPNET5.Data.Converter.Contract
 {
     public interface IParser<O, D>
     {

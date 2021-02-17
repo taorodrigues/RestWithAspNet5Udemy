@@ -1,4 +1,4 @@
-﻿namespace RestWithASPNETUdemy.Hypermedia.Constants
+﻿namespace RestWithASPNET5.Hypermedia.Constants
 {
     public sealed class ResponseTypeFormat
     {

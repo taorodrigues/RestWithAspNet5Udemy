@@ -1,4 +1,4 @@
-﻿namespace RestWithASPNETUdemy.Data.VO
+﻿namespace RestWithASPNET5.Data.VO
 {
     public class TokenVO
     {

@@ -1,10 +1,10 @@
-﻿using RestWithASPNETUdemy.Hypermedia.Abstract;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using RestWithASPNET5.Hypermedia.Abstract;
 
-namespace RestWithASPNETUdemy.Hypermedia.Utils
+namespace RestWithASPNET5.Hypermedia.Utils
 {
     public class PagedSearchVO<T> where T : ISupportsHyperMedia
     {

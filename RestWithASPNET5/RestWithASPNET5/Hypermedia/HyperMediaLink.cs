@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RestWithASPNETUdemy.Hypermedia
+namespace RestWithASPNET5.Hypermedia
 {
     public class HyperMediaLink
     {

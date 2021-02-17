@@ -1,7 +1,7 @@
-﻿using RestWithASPNETUdemy.Model.Base;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using RestWithASPNET5.Model.Base;
 
-namespace RestWithASPNETUdemy.Model
+namespace RestWithASPNET5.Model
 {
     [Table("person")]
     public class Person : BaseEntity

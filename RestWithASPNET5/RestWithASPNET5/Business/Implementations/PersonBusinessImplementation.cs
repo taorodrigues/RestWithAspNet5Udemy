@@ -1,11 +1,11 @@
-﻿using RestWithASPNETUdemy.Data.Converter.Implementations;
-using RestWithASPNETUdemy.Data.VO;
-using RestWithASPNETUdemy.Hypermedia.Utils;
-using RestWithASPNETUdemy.Model;
-using RestWithASPNETUdemy.Repository;
+﻿using RestWithASPNET5.Model;
 using System.Collections.Generic;
+using RestWithASPNET5.Data.Converter.Implementations;
+using RestWithASPNET5.Data.VO;
+using RestWithASPNET5.Hypermedia.Utils;
+using RestWithASPNET5.Repository;
 
-namespace RestWithASPNETUdemy.Business.Implementations
+namespace RestWithASPNET5.Business.Implementations
 {
     public class PersonBusinessImplementation : IPersonBusiness
     {

@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace RestWithASPNETUdemy.Model
+namespace RestWithASPNET5.Model
 {
     [Table("users")]
     public class User

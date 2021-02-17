@@ -1,7 +1,7 @@
-﻿using RestWithASPNETUdemy.Data.VO;
-using RestWithASPNETUdemy.Model;
+﻿using RestWithASPNET5.Data.VO;
+using RestWithASPNET5.Model;
 
-namespace RestWithASPNETUdemy.Repository
+namespace RestWithASPNET5.Repository
 {
     public interface IUserRepository
     {

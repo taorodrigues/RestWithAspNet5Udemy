@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Security.Claims;
 
-namespace RestWithASPNETUdemy.Services
+namespace RestWithASPNET5.Services
 {
     public interface ITokenService
     {

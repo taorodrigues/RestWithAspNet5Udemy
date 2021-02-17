@@ -1,8 +1,8 @@
-﻿using RestWithASPNETUdemy.Hypermedia;
-using RestWithASPNETUdemy.Hypermedia.Abstract;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using RestWithASPNET5.Hypermedia;
+using RestWithASPNET5.Hypermedia.Abstract;
 
-namespace RestWithASPNETUdemy.Data.VO
+namespace RestWithASPNET5.Data.VO
 {
     public class PersonVO : ISupportsHyperMedia
     {

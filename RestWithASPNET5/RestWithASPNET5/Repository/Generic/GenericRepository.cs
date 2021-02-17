@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RestWithASPNETUdemy.Model.Base;
-using RestWithASPNETUdemy.Model.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using RestWithASPNET5.Model.Base;
+using RestWithASPNET5.Model.Context;
 
-namespace RestWithASPNETUdemy.Repository.Generic
+namespace RestWithASPNET5.Repository.Generic
 {
     public class GenericRepository<T> : IRepository<T> where T : BaseEntity
     {

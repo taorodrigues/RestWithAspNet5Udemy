@@ -1,8 +1,8 @@
-﻿using RestWithASPNETUdemy.Data.VO;
-using RestWithASPNETUdemy.Hypermedia.Utils;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using RestWithASPNET5.Data.VO;
+using RestWithASPNET5.Hypermedia.Utils;
 
-namespace RestWithASPNETUdemy.Business
+namespace RestWithASPNET5.Business
 {
     public interface IPersonBusiness
     {

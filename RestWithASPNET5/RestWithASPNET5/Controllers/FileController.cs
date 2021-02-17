@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using RestWithASPNETUdemy.Business;
-using RestWithASPNETUdemy.Data.VO;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using RestWithASPNET5.Business;
+using RestWithASPNET5.Data.VO;
 
-namespace RestWithASPNETUdemy.Controllers
+namespace RestWithASPNET5.Controllers
 {
     [ApiVersion("1")]
     [Authorize("Bearer")]

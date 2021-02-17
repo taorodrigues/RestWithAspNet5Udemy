@@ -1,5 +1,4 @@
 ﻿using Microsoft.IdentityModel.Tokens;
-using RestWithASPNETUdemy.Configurations;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -8,8 +7,9 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using RestWithASPNET5.Configurations;
 
-namespace RestWithASPNETUdemy.Services.Implementations
+namespace RestWithASPNET5.Services.Implementations
 {
     public class TokenService : ITokenService
     {

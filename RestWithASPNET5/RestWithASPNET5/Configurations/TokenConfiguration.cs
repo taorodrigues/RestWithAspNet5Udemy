@@ -1,4 +1,4 @@
-﻿namespace RestWithASPNETUdemy.Configurations
+﻿namespace RestWithASPNET5.Configurations
 {
     public class TokenConfiguration
     {

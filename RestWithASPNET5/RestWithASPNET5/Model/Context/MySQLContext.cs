@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace RestWithASPNETUdemy.Model.Context
+namespace RestWithASPNET5.Model.Context
 {
     public class MySQLContext : DbContext
     {

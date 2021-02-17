@@ -1,7 +1,7 @@
-﻿using RestWithASPNETUdemy.Model;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using RestWithASPNET5.Model;
 
-namespace RestWithASPNETUdemy.Repository
+namespace RestWithASPNET5.Repository
 {
     public interface IPersonRepository : IRepository<Person>
     {
