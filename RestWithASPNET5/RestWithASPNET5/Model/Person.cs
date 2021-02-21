@@ -3,22 +3,22 @@ using RestWithASPNET5.Model.Base;
 
 namespace RestWithASPNET5.Model
 {
-    [Table("person")]
-    public class Person : BaseEntity
-    {
-        [Column("first_name")]
-        public string FirstName { get; set; }
+  [Table("Person")]
+  public class Person : BaseEntity
+  {
+    [Column("FirstName")]
+    public string FirstName { get; set; }
 
-        [Column("last_name")]
-        public string LastName { get; set; }
+    [Column("LastName")]
+    public string LastName { get; set; }
 
-        [Column("address")]
-        public string Address { get; set; }
+    [Column("Address")]
+    public string Address { get; set; }
 
-        [Column("gender")]
-        public string Gender { get; set; }
+    [Column("Gender")]
+    public string Gender { get; set; }
 
-        [Column("enabled")]
-        public bool Enabled { get; set; }
-    }
+    [Column("Enabled")]
+    public bool Enabled { get; set; }
+  }
 }

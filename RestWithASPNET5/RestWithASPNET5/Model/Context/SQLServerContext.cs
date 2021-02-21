@@ -8,6 +8,7 @@ namespace RestWithASPNET5.Model.Context
     {
 
     }
+
     public SQLServerContext(DbContextOptions<SQLServerContext> options) : base(options) { }
 
     public DbSet<Person> Persons { get; set; }

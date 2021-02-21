@@ -1,10 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RestWithASPNET5.Model.Base
 {
-    public class BaseEntity
-    {
-        [Column("id")]
-        public long Id { get; set; }
-    }
+  public class BaseEntity
+  {
+    [Column("Id")]
+    public Guid Id { get; set; }
+  }
 }

@@ -97,12 +97,12 @@ namespace RestWithASPNET5
       //services.AddDbContext<MySQLContext>(options => options.UseMySql(connection));
 
       var connection = Configuration["SQLServerConnection:SQLServerConnectionString"];
-      services.AddDbContext<MySQLContext>(options => options.UseSqlServer(connection));
+      services.AddDbContext<SQLServerContext>(options => options.UseSqlServer(connection));
 
-      if (Environment.IsDevelopment())
-      {
-        MigrateDatabase(connection);
-      }
+      //if (Environment.IsDevelopment())
+      //{
+      //  MigrateDatabase(connection);
+      //}
 
       services.AddMvc(options =>
       {
@@ -157,12 +157,14 @@ namespace RestWithASPNET5
 
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env, SQLServerContext dataContext)
     {
       if (env.IsDevelopment())
       {
         app.UseDeveloperExceptionPage();
       }
+
+      dataContext.Database.Migrate();
 
       app.UseHttpsRedirection();
 
@@ -175,7 +177,7 @@ namespace RestWithASPNET5
       app.UseSwaggerUI(c =>
       {
         c.SwaggerEndpoint("/swagger/v1/swagger.json",
-            "REST API's From 0 to Azure with ASP.NET Core 5 and Docker - v1");
+            "REST API with ASP.NET Core 5 - v1");
       });
 
       var option = new RewriteOptions();
@@ -189,26 +191,6 @@ namespace RestWithASPNET5
         endpoints.MapControllers();
         endpoints.MapControllerRoute("DefaultApi", "{controller=values}/{id?}");
       });
-    }
-    private void MigrateDatabase(string connection)
-    {
-      try
-      {
-        // To use MySQL, uncomment the line below
-        // var evolveConnection = new MySql.Data.MySqlClient.MySqlConnection(connection);
-        var evolveConnection = new SqlConnection(connection);
-        var evolve = new Evolve.Evolve(evolveConnection, msg => Log.Information(msg))
-        {
-          Locations = new List<string> { "db/migrations", "db/dataset" },
-          IsEraseDisabled = true,
-        };
-        evolve.Migrate();
-      }
-      catch (Exception ex)
-      {
-        Log.Error("Database migration failed", ex);
-        throw;
-      }
     }
   }
 }
