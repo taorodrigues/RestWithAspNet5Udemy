@@ -27,6 +27,7 @@ using System.Text;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Data.SqlClient;
 
 namespace RestWithASPNET5
 {
@@ -91,8 +92,12 @@ namespace RestWithASPNET5
 
       services.AddControllers();
 
-      var connection = Configuration["MySQLConnection:MySQLConnectionString"];
-      services.AddDbContext<MySQLContext>(options => options.UseMySql(connection));
+      // To use MySQL, uncomment the 2 lines below and intall Nuget package for MySql
+      //var connection = Configuration["MySQLConnection:MySQLConnectionString"];
+      //services.AddDbContext<MySQLContext>(options => options.UseMySql(connection));
+
+      var connection = Configuration["SQLServerConnection:SQLServerConnectionString"];
+      services.AddDbContext<MySQLContext>(options => options.UseSqlServer(connection));
 
       if (Environment.IsDevelopment())
       {
@@ -189,7 +194,9 @@ namespace RestWithASPNET5
     {
       try
       {
-        var evolveConnection = new MySql.Data.MySqlClient.MySqlConnection(connection);
+        // To use MySQL, uncomment the line below
+        // var evolveConnection = new MySql.Data.MySqlClient.MySqlConnection(connection);
+        var evolveConnection = new SqlConnection(connection);
         var evolve = new Evolve.Evolve(evolveConnection, msg => Log.Information(msg))
         {
           Locations = new List<string> { "db/migrations", "db/dataset" },
