@@ -10,8 +10,8 @@ using RestWithASPNET5.Model.Context;
 namespace RestWithASPNET5.Migrations
 {
     [DbContext(typeof(SQLServerContext))]
-    [Migration("20210221222909_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20210221232023_RunSqlScript")]
+    partial class RunSqlScript
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,10 +23,11 @@ namespace RestWithASPNET5.Migrations
 
             modelBuilder.Entity("RestWithASPNET5.Model.Book", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier")
-                        .HasColumnName("Id");
+                        .HasColumnType("bigint")
+                        .HasColumnName("Id")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Author")
                         .HasColumnType("nvarchar(max)")
@@ -51,10 +52,11 @@ namespace RestWithASPNET5.Migrations
 
             modelBuilder.Entity("RestWithASPNET5.Model.Person", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier")
-                        .HasColumnName("Id");
+                        .HasColumnType("bigint")
+                        .HasColumnName("Id")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)")
@@ -78,7 +80,7 @@ namespace RestWithASPNET5.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Persons");
+                    b.ToTable("Person");
                 });
 
             modelBuilder.Entity("RestWithASPNET5.Model.User", b =>

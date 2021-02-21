@@ -11,7 +11,8 @@ namespace RestWithASPNET5.Migrations
                 name: "Book",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Author = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Price = table.Column<decimal>(type: "decimal(18,4)", nullable: false),
@@ -23,10 +24,11 @@ namespace RestWithASPNET5.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Persons",
+                name: "Person",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -35,7 +37,7 @@ namespace RestWithASPNET5.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Persons", x => x.Id);
+                    table.PrimaryKey("PK_Person", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -62,7 +64,7 @@ namespace RestWithASPNET5.Migrations
                 name: "Book");
 
             migrationBuilder.DropTable(
-                name: "Persons");
+                name: "Person");
 
             migrationBuilder.DropTable(
                 name: "Users");

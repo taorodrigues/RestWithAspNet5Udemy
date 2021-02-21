@@ -48,7 +48,7 @@ namespace RestWithASPNET5.Hypermedia.Enricher
       return null;
     }
 
-    private string GetLink(Guid id, IUrlHelper urlHelper, string path)
+    private string GetLink(long id, IUrlHelper urlHelper, string path)
     {
       lock (_lock)
       {

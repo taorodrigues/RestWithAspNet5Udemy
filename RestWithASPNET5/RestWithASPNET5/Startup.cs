@@ -10,7 +10,6 @@ using RestWithASPNET5.Business.Implementations;
 using RestWithASPNET5.Repository;
 using Serilog;
 using System;
-using System.Collections.Generic;
 using RestWithASPNET5.Repository.Generic;
 using Microsoft.Net.Http.Headers;
 using RestWithASPNET5.Hypermedia.Filters;
@@ -27,7 +26,6 @@ using System.Text;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Data.SqlClient;
 
 namespace RestWithASPNET5
 {
@@ -164,8 +162,6 @@ namespace RestWithASPNET5
         app.UseDeveloperExceptionPage();
       }
 
-      dataContext.Database.Migrate();
-
       app.UseHttpsRedirection();
 
       app.UseRouting();
@@ -191,6 +187,9 @@ namespace RestWithASPNET5
         endpoints.MapControllers();
         endpoints.MapControllerRoute("DefaultApi", "{controller=values}/{id?}");
       });
+
+      // Roda os migrations quando a aplicacao iniciar
+      dataContext.Database.Migrate();
     }
   }
 }

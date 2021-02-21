@@ -6,6 +6,7 @@ namespace RestWithASPNET5.Model.Base
   public class BaseEntity
   {
     [Column("Id")]
-    public Guid Id { get; set; }
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public long Id { get; set; }
   }
 }

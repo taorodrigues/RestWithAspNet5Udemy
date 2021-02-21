@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RestWithASPNET5.Data.VO;
@@ -55,7 +53,7 @@ namespace RestWithASPNET5.Hypermedia.Enricher
       return null;
     }
 
-    private string GetLink(Guid id, IUrlHelper urlHelper, string path)
+    private string GetLink(long id, IUrlHelper urlHelper, string path)
     {
       lock (_lock)
       {
